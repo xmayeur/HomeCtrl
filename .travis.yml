@@ -8,13 +8,13 @@ services:
 # See https://sebest.github.io/post/using-travis-ci-to-build-docker-images/
 script:
 - docker run --rm --privileged multiarch/qemu-user-static:register --reset
-- docker build -t HomeCtrl .
+- docker build -t homectrl .
 - |-
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
     # TAG=$(grep "ENV MYSQL_VERSION" Dockerfile | awk 'NF>1{print $NF}')
-    docker tag HomeCtrl xmayeur/HomeCtrl
-    docker push xmayeur/HomeCtrl
+    docker tag homectrl xmayeur/homectrl
+    docker push xmayeur/homectrl
   fi
 addons:
   ssh_known_hosts: home.mayeur.be
