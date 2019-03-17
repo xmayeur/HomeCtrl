@@ -32,9 +32,9 @@ addons:
 # - chmod 600 /tmp/deploy_rsa
 # - ssh-add /tmp/deploy_rsa
 
-deploy:
-  provider: script
-  skip_cleanup: true
+# deploy:
+#  provider: script
+#  skip_cleanup: true
 #  script: ssh -o "StrictHostKeyChecking no" -t root@home.mayeur.be -p 2202 /root/HomeCtrl.sh
 
 env:
