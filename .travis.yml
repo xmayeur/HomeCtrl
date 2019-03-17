@@ -35,7 +35,7 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: ssh -o "StrictHostKeyChecking no" -t root@home.mayeur.be -p 2202 /root/HomeCtrl.sh
+#  script: ssh -o "StrictHostKeyChecking no" -t root@home.mayeur.be -p 2202 /root/HomeCtrl.sh
 
 env:
   global: 
